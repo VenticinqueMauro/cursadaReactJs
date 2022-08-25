@@ -1,8 +1,9 @@
 import React from "react";
 import logo from "./img/ENE.png";
+import CartWidget from "./CartWidget";
 
 
-const Header = () => {
+const NavBar = () => {
 
     return (
         <nav className="navbar navbar-expand-lg bg-light">
@@ -33,15 +34,11 @@ const Header = () => {
                             <a className="nav-link">Contact</a>
                         </li>
                     </ul>
-                    <a href="#" className="position-relative"><i className="fa-solid fa-cart-shopping text-dark h3"></i>
-                        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
-                            +
-                        </span>
-                    </a>
+                    <CartWidget />
                 </div>
             </div>
         </nav>
     )
 }
 
-export default Header;
+export default NavBar;
