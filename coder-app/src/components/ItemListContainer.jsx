@@ -9,7 +9,7 @@ const ItemListContainer = ({greeting}) => {
         <div className="container">
             <div className="row mt-5">
                 <div className="col">
-                    <h1>{greeting}</h1>
+                    <h1 className="titulo">{greeting}</h1>
                 </div>
             </div>
         </div>
