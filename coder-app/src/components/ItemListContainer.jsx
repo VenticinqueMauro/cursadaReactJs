@@ -1,8 +1,8 @@
 import React from "react";
 
-const ItemListContainer = () => {
+const ItemListContainer = ({greeting}) => {
     
-    let greeting = 'Hola Jesus! aqui Mauro Venticinque xd'
+    
 
     return (
 
@@ -18,3 +18,5 @@ const ItemListContainer = () => {
 }
 
 export default ItemListContainer;
+
+
