@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./img/ENE.png";
+import logo from "../img/ENE.png";
 import CartWidget from "./CartWidget";
 
 

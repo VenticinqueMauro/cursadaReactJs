@@ -16,3 +16,10 @@ code {
   font-size: 60px;
   text-align: center;
 }
+
+.imgCard{
+  width: 18rem;
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+}
