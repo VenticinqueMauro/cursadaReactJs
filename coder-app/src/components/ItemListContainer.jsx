@@ -8,6 +8,7 @@ const ItemListContainer = ({ greeting }) => {
     let stock = 10;
     let mensajeStock = 'Superaste el Stock disponible!'
     const alertaStock = document.getElementById('alertaStock')
+    const btnCarrito = document.getElementById('btnCarrito')
     
     const aumentar = () => {
         clics < stock ? setClics(clics + 1) : alertaStock.innerHTML = mensajeStock;
@@ -19,7 +20,12 @@ const ItemListContainer = ({ greeting }) => {
     const agregarAlCarrito = () => {
         console.log(clics + " Producto/s Agregados")
         stock = stock - clics;
-        stock < 1 ? console.log("Sin Stock") : console.log("Stock Disponible: " + stock)
+        if ( stock < 1) {
+            btnCarrito.disabled = true;
+            console.log("Sin Stock")
+        } else {
+            console.log("Stock Disponible: " + stock)
+        }
     }
 
     return (

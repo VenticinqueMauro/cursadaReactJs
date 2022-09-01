@@ -14,7 +14,7 @@ const ItemCount = (props) => {
                     <a type="button" className="btn btn-primary mb-2">{props.contador} {props.producto}</a>
                     <a type="button" className="btn btn-primary mb-2" onClick={props.aumentar}>+</a>
                 </div>
-                <button href="#" className="btn btn-primary d-block mx-auto" onClick={props.agregarAlCarrito}>Agregar al carrito</button>
+                <button id="btnCarrito" href="#" className="btn btn-primary d-block mx-auto" onClick={props.agregarAlCarrito}>Agregar al carrito</button>
             </div>
         </div>
     )
