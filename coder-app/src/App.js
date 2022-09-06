@@ -9,7 +9,7 @@ function App() {
     <div>
       <NavBar />
       <ItemListContainer
-        greeting="Desafio Componentes II" />
+        greeting="Desafios ReactJs" />
     </div>
   );
 }

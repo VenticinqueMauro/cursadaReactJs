@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import ItemCount from "./ItemCount";
+import { useEffect } from "react";
+// import ItemCount from "./ItemCount";
+import ItemList from "./ItemList";
+import { productos } from "./mock"
 
 const ItemListContainer = ({ greeting }) => {
 
@@ -28,20 +31,38 @@ const ItemListContainer = ({ greeting }) => {
         }
     }
 
+    // DESAFIO PROMESAS Y MAP 
+
+    const [items, setItems] = useState([])
+
+    useEffect(() => {
+
+        const promesa = new Promise ((resolve) => {
+            setTimeout(() => {
+                resolve(productos)
+            }, 2000)
+        })
+
+        promesa.then(resolve => {
+            setItems(resolve)
+        })
+
+    }, [])
+
+
     return (
         <div className="container">
             <div className="row mt-5">
                 <div className="col">
                     <h1 className="titulo">{greeting}</h1>
                 </div>
-                <div className="col-md-12">
-                    <ItemCount aumentar={aumentar}
+                    {/* <ItemCount aumentar={aumentar}
                     decrementar={decrementar} 
                     contador={clics} 
                     agregarAlCarrito={agregarAlCarrito}
-                    mensaje={mensajeStock}/>
-                </div>
+                    mensaje={mensajeStock}/> */}
             </div>
+                    <ItemList items={items} />
         </div>
 
     )
