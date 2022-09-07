@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
+import ItemDetailContainer from "./ItemDetailContainer";
 // import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
 import { productos } from "./mock"
@@ -63,6 +64,7 @@ const ItemListContainer = ({ greeting }) => {
                     mensaje={mensajeStock}/> */}
             </div>
                     <ItemList items={items} />
+                    <ItemDetailContainer />
         </div>
 
     )
