@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../img/ENE.png";
 import CartWidget from "./CartWidget";
 
 
@@ -8,7 +7,7 @@ const NavBar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-light">
             <div className="container">
-                <a className="navbar-brand" href="index.html"><img src={logo} alt="logo" width="60" className="animate__animated animate__heartBeat animate__delay-2s" /></a>
+                <a className="navbar-brand" href="index.html"><i className="fa-solid fa-graduation-cap animate__animated animate__heartBeat animate__delay-2s h1"></i>React Js.</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
