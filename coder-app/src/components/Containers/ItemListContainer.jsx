@@ -1,36 +1,10 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import ItemDetailContainer from "./ItemDetailContainer";
-// import ItemCount from "./ItemCount";
-import ItemList from "./ItemList";
-import { productos } from "./mock"
+import ItemList from "../Items/ItemList";
+import { productos } from "../mock"
 
 const ItemListContainer = ({ greeting }) => {
-
-    const [clics, setClics] = useState(1)
-
-    let stock = 10;
-    let mensajeStock = 'Superaste el Stock disponible!'
-    const alertaStock = document.getElementById('alertaStock')
-    const btnCarrito = document.getElementById('btnCarrito')
-    
-    const aumentar = () => {
-        clics < stock ? setClics(clics + 1) : alertaStock.innerHTML = mensajeStock;
-    }
-    const decrementar = () => {
-        clics > 1 ? setClics(clics - 1) : console.log("cantidad erronea")
-    }
-
-    const agregarAlCarrito = () => {
-        console.log(clics + " Producto/s Agregados")
-        stock = stock - clics;
-        if ( stock < 1) {
-            btnCarrito.disabled = true;
-            console.log("Sin Stock")
-        } else {
-            console.log("Stock Disponible: " + stock)
-        }
-    }
 
     // DESAFIO PROMESAS Y MAP 
 

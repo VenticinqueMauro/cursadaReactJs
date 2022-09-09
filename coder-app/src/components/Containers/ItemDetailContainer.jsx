@@ -1,8 +1,8 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import ItemDetail from "./ItemDetail";
-import { productos } from "./mock";
+import ItemDetail from "../Items/ItemDetail";
+import { productos } from "../mock";
 
 const ItemDetailContainer = () => {
 
