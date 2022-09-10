@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import 'animate.css'
 
 
 const ItemCount = ( { stock, initial, id }) => {
@@ -15,12 +16,11 @@ const ItemCount = ( { stock, initial, id }) => {
     };
 
     const agregarAlCarrito = () => {
-        console.log(count + " Producto/s Agregados")
         stock = stock - count;
         if ( stock < 1) {
             const btnCarrito = document.getElementById(`btnCarrito${id}`)
             btnCarrito.disabled = true;
-            btnCarrito.classList.add('btn-danger')
+            btnCarrito.classList.add('btn-danger', 'animate__animated', 'animate__zoomOut' , 'animate__delay-1s')
             btnCarrito.innerHTML = `Sin Stock! <i class="fa-solid fa-face-frown"></i>`
             console.log("Sin Stock")
         } else {

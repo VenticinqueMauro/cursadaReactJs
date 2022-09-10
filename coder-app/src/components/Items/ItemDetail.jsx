@@ -3,9 +3,10 @@ import ItemCount from './ItemCount'
 
 export default function ItemDetail( { producto } ) {
 
+
     return (
 
-        <div className='row text-center mt-5 rounded mx-auto' style={{boxShadow: "0px 0px 10px #7d7d7d"}}>
+        <div className={'row text-center mt-5  mx-auto' }>
             <div className="col-12 col-md-4 offset-md-2 ">
                 <img src={producto.pictureURL} alt={producto.title} width={'400'}/>
             </div>
