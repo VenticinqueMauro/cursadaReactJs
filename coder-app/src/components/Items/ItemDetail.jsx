@@ -12,9 +12,9 @@ export default function ItemDetail( { producto } ) {
             </div>
             <div className="col-12 col-md-2 d-block my-auto">
                 <h3>{producto.title}</h3>
-                <p>{producto.description}</p>
+                <p>{producto.description} - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem neque sit fugiat vel dignissimos dolore minus repudiandae minima in eaque?</p>
                 <p className='h2'>${producto.price}</p>
-                <ItemCount id={producto.id} initial={1} stock={10} />
+                <ItemCount id={producto.id} initial={1} stock={producto.stock} />
             </div>
         </div>
 

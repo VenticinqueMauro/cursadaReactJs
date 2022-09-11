@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-// import ItemDetailContainer from "./ItemDetailContainer";
+import { useParams } from "react-router-dom";
 import ItemList from "../Items/ItemList";
 import { productos } from "../mock"
 
 const ItemListContainer = ({ greeting }) => {
 
-    // DESAFIO PROMESAS Y MAP 
-
     const [items, setItems] = useState([])
+
+    let { categoryId } = useParams()
 
     useEffect(() => {
 
@@ -16,26 +16,27 @@ const ItemListContainer = ({ greeting }) => {
             setTimeout(() => {
                 resolve(productos)
             }, 500)
-        })
+        });
 
-        promesa.then(resolve => {
-            setItems(resolve)
-        })
+        if (categoryId) {
+            promesa.then(resolve => setItems(resolve.filter( item => item.category === categoryId)));
+        } else {
+            promesa.then(resolve => setItems(resolve))
+        }
 
-    }, [])
+    }, [categoryId])
+
 
 
     return (
         <div className="container">
-            <div className="row mt-5">
+            <div className="row mt-2">
                 <div className="col">
                     <h1 className="titulo">{greeting}</h1>
                 </div>
             </div>
                     <ItemList items={items} />
-                    {/* <ItemDetailContainer /> */}
         </div>
-
     )
 }
 
