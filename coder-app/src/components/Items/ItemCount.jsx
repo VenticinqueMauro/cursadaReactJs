@@ -34,11 +34,11 @@ const ItemCount = ( { stock, initial, id }) => {
 
             <>
                 <div className="btn-group" role="group" aria-label="Basic example">
-                    <a type="button" className="btn btn-primary mb-2" onClick={decrementar}>-</a>
-                    <a type="button" className="btn btn-primary mb-2">{count}</a>
-                    <a type="button" className="btn btn-primary mb-2" onClick={aumentar}>+</a>
+                    <a type="button" className="btn btn-warning text-white mb-2" onClick={decrementar}>-</a>
+                    <a type="button" className="btn btn-warning text-white mb-2">{count}</a>
+                    <a type="button" className="btn btn-warning text-white mb-2" onClick={aumentar}>+</a>
                 </div>
-                <button id={`btnCarrito${id}`} href="#" className="btn btn-primary d-block mx-auto" onClick={agregarAlCarrito}>Agregar <i className="fa-solid fa-face-laugh-beam"></i></button>
+                <button id={`btnCarrito${id}`} href="#" className="btn btn-warning text-white d-block mx-auto" onClick={agregarAlCarrito} style={{boxShadow: "0px 3px 5px #7d7d7d"}}>Agregar <i className="fa-solid fa-face-laugh-beam"></i></button>
             </>
     )
 }
