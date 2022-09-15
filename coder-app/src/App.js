@@ -4,22 +4,27 @@ import ItemListContainer from './components/Containers/ItemListContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ItemDetailContainer from './components/Containers/ItemDetailContainer';
 import { Footer } from './components/Footer/Footer';
+import CartProvider from './Context/CartContext';
+
+
+
 
 function App() {
 
-
   return (
-    <div className='container-fluid'>
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path='/' element={<ItemListContainer greeting="Desafios ReactJs"  />} />
-          <Route path='/category/:categoryId' element={<ItemListContainer />} />
-          <Route path='/item/:id' element={<ItemDetailContainer />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </div>
+    <CartProvider>
+      <div className='container-fluid'>
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
+            <Route path='/' element={<ItemListContainer greeting="Desafios ReactJs" />} />
+            <Route path='/category/:categoryId' element={<ItemListContainer />} />
+            <Route path='/item/:id' element={<ItemDetailContainer />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </div>
+    </CartProvider>
   );
 }
 
