@@ -4,10 +4,10 @@ import ItemCount from './ItemCount'
 
 export default function ItemDetail( { producto } ) {
 
-    const { addCart } = useContext(CartContext)
+    const { addItem } = useContext(CartContext)
 
     const onAdd = (cantidad) => {
-        addCart(producto, cantidad)
+        addItem(producto, cantidad)
     }
 
 

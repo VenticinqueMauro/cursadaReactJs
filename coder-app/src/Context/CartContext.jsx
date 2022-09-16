@@ -6,19 +6,38 @@ const CartProvider = (props) => {
 
     const [cart, setCart] = useState([])
 
-    const addCart = (item, cantidad) => {
+    const clear = () => setCart([])
 
-        const prodSeleccionado = {...item, cantidad}
-        setCart([...cart, prodSeleccionado])
+    const isInCart = (id) => {
+        return cart.find(item => item.id === id) ? true : false
     }
-    
+
+    const removeItem = (id) => {
+        return setCart(cart.filter(item => item.id !== id))
+    }
+
+
+
+    const addItem = (item, cantidad) => {
+        const prodSeleccionado = { ...item, cantidad }
+
+        if (isInCart(item.id)) {
+            setCart(cart.map(prod => {
+                return prod.id === item.id ? { ...prod, cantidad: prod.cantidad + cantidad } : prod
+            }))
+        } else {
+            setCart([...cart, prodSeleccionado])
+        }
+
+    }
+
     console.log(cart)
 
 
 
 
     return (
-        <CartContext.Provider value={{ addCart }}>
+        <CartContext.Provider value={{ addItem, clear, isInCart, removeItem }}>
             {props.children}
         </CartContext.Provider>
     );

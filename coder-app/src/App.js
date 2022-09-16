@@ -12,9 +12,9 @@ import CartProvider from './Context/CartContext';
 function App() {
 
   return (
-    <CartProvider>
-      <div className='container-fluid'>
-        <BrowserRouter>
+    <div className='container-fluid'>
+      <BrowserRouter>
+        <CartProvider>
           <NavBar />
           <Routes>
             <Route path='/' element={<ItemListContainer greeting="Desafios ReactJs" />} />
@@ -22,9 +22,9 @@ function App() {
             <Route path='/item/:id' element={<ItemDetailContainer />} />
           </Routes>
           <Footer />
-        </BrowserRouter>
-      </div>
-    </CartProvider>
+        </CartProvider>
+      </BrowserRouter>
+    </div>
   );
 }
 
