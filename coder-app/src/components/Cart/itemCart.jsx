@@ -25,7 +25,7 @@ export const ItemCart = ({ product }) => {
                     <p>SubTotal: ${product.price * product.cantidad}</p>
                 </div>
                 <div className="col-md-2">
-                    <button onClick={() => removeItem(product.id)} >Eliminar</button>
+                    <button className='btn btn-warning text-white d-block mx-auto' onClick={() => removeItem(product.id)} style={{boxShadow: "0px 3px 5px #7d7d7d"}}>Eliminar</button>
                 </div>
             </div>
         </div>
