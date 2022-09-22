@@ -3,7 +3,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../Items/ItemDetail";
-import { productos } from "../mock";
+import { getFirestore, doc, getDoc,  } from 'firebase/firestore'
+
 
 const ItemDetailContainer = () => {
 
@@ -12,18 +13,12 @@ const ItemDetailContainer = () => {
     let { id } = useParams()
 
     useEffect(() => {
-
-        const getItem = new Promise(resolve => {
-            setTimeout(() => {
-                resolve(productos.find(prod => prod.id === parseInt(id)))
-            }, 500);
+        const db = getFirestore()
+        const response = doc(db, 'whiskys', id);
+        getDoc(response).then(snapShot => {
+            setProducto({id: snapShot.id, ...snapShot.data()})
+            
         })
-
-        getItem.then( (response) => {
-            setProducto(response);
-        })
-
-
     }, [id])
 
     return (

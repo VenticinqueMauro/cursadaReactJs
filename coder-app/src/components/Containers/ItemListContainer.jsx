@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../Items/ItemList";
-import { productos } from "../mock"
+import { getFirestore, collection, getDocs, query, where  } from 'firebase/firestore'
+
+
 
 const ItemListContainer = ({ greeting }) => {
 
@@ -11,19 +13,12 @@ const ItemListContainer = ({ greeting }) => {
     let { categoryId } = useParams()
 
     useEffect(() => {
-
-        const promesa = new Promise ((resolve) => {
-            setTimeout(() => {
-                resolve(productos)
-            }, 500)
-        });
-
-        if (categoryId) {
-            promesa.then(resolve => setItems(resolve.filter( item => item.category === categoryId)));
-        } else {
-            promesa.then(resolve => setItems(resolve))
-        }
-
+        const db = getFirestore();
+        const itemsCollection = collection(db, 'whiskys')
+        const queryItems = categoryId ? query(itemsCollection, where('category', '==', categoryId )) : itemsCollection;
+        getDocs(queryItems).then(snapShot => {
+            setItems(snapShot.docs.map(item =>  ({id:item.id, ...item.data()}) ))
+        })
     }, [categoryId])
 
 

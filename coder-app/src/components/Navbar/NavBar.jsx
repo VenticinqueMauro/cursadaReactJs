@@ -25,8 +25,8 @@ const NavBar = () => {
                                 Products
                             </NavLink>
                             <ul className="dropdown-menu">
-                                <li><NavLink className="dropdown-item" to='/category/comun'>Comunes</NavLink></li>
-                                <li><NavLink className="dropdown-item" to='/category/mentolado'>Mentolados</NavLink></li>
+                                <li><NavLink className="dropdown-item" to='/category/12'>12 Años</NavLink></li>
+                                <li><NavLink className="dropdown-item" to='/category/15'>15 Años</NavLink></li>
                                 <li><NavLink className="dropdown-item" to='/'>Todos</NavLink></li>
                             </ul>
                         </li>

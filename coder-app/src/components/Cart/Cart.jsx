@@ -23,7 +23,7 @@ export const Cart = () => {
                 {cart.map((product) => (
                     <ItemCart key={product.id} product={product} />
                 ))}
-                <hr />
+                <hr className='mt-3' />
                 <div className="row mt-3">
                     <div className="col-md-4">
                         <button className='btn btn-warning text-white d-block mx-auto' onClick={() => clear()} style={{ boxShadow: "0px 3px 5px #7d7d7d" }}>Vaciar</button>
