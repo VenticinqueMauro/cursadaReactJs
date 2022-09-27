@@ -5,14 +5,29 @@ import { Link } from "react-router-dom";
 const Item = ({ item }) => {
 
     return (
-        <div className="card-img-top" style={{maxWidth: '18rem'}}>
-            <img src={item.pictureURL} className="card-img-top w-50" alt={item.title}  />
-                <div className="card-body text-center">
-                    <h5 className="card-title">{item.title}</h5>
-                    <p className="card-text mt-2">{item.description}</p>
-                    <Link to={`/item/${item.id}`} className="btn btn-warning text-center text-white" style={{boxShadow: "0px 3px 5px #7d7d7d"}}>Mas Info</Link>
+
+        <div className="card mt-5 border-0 rounded d-block mx-auto bg-transparent" style={{width: '12rem'}}>
+            <img src={item.pictureURL} className="card-img-top  pt-3 pb-2" alt={item.title} />
+                <div className="card-body bg-dark text-white rounded">
+                    <p className="card-title h6">{item.title}</p>  
+                    <hr />  
+                    <div className="d-flex justify-content-around d-block my-auto">
+                    <h4 className="d-block my-auto h6">${item.price}</h4>
+                    <Link to={`/item/${item.id}`} className="btn text-end d-block my-auto btn-info" style={{boxShadow: "-2px 3px 5px #000"}}><i className="fa-solid fa-info"></i></Link>
+                    </div>
                 </div>
         </div>
+
+
+
+        // <div className="card-img-top m-2 " style={{maxWidth: '16rem'}}>
+        //     <img src={item.pictureURL} className="card-img-top w-50" alt={item.title}  />
+        //         <div className="card-body text-center">
+        //             <h5 className="card-title">{item.title}</h5>
+        //             <p className="card-text mt-2">{item.description}</p>
+        //             <Link to={`/item/${item.id}`} className="btn btn-warning  text-white" style={{boxShadow: "0px 3px 5px #7d7d7d"}}>More Info</Link>
+        //         </div>
+        // </div>
     )
 }
 

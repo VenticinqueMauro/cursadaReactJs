@@ -10,29 +10,31 @@ export const Cart = () => {
     if (precioTotal() < 1) {
 
         return (
-            <div className='text-center mt-5'>
-                <h2>No hay productos en el Carrito!</h2>
-                <Link to='/'><h3>Volver al Inicio</h3></Link>
+            <div className='text-center mt-5  p-5 carritoVacio  min-vh-100 '>
+                <div className='contenedorVacio p-5 '>
+                                    <h2 className='h1 d-block my-auto'>There are no bottles in the glass!</h2>
+                <Link to='/' style={{color: '#ffc107'}}><h3 className='carritoVacioVolver '>Come Back!</h3></Link>
+                </div>
+
             </div>
         )
     }
 
     return (
-        <div className='container mt-5 text-center'>
-            <div className="row">
+        <div className='container pt-3 text-center text-white p-3 min-vh-100 d-flex align-items-center'>
+            <div className="row pt-3 contenedorCart ">
                 {cart.map((product) => (
                     <ItemCart key={product.id} product={product} />
                 ))}
-                <hr className='mt-3' />
-                <div className="row mt-3">
+                <div className="row pt-3">
                     <div className="col-md-4">
-                        <button className='btn btn-warning text-white d-block mx-auto' onClick={() => clear()} style={{ boxShadow: "0px 3px 5px #7d7d7d" }}>Vaciar</button>
+                        <button className='btn btn-warning text-black d-block mx-auto rounded-pill' onClick={() => clear()} style={{ boxShadow: "0px 3px 5px #000", fontWeight: '600'}}>Delete all</button>
                     </div>
                     <div className="col-md-4 h2">
                         <p>Total: <b>${precioTotal()}</b></p>
                     </div>
                     <div className="col-md-4">
-                        <button className='btn btn-warning text-white d-block mx-auto' style={{ boxShadow: "0px 3px 5px #7d7d7d" }}>Comprar</button>
+                        <button className='btn btn-warning text-black d-block mx-auto rounded-pill' style={{ boxShadow: "0px 3px 5px #000", fontWeight: '600'}}>Buy</button>
                     </div>
                 </div>
             </div>

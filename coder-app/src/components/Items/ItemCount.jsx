@@ -24,7 +24,7 @@ const ItemCount = ( { initial, id, onAdd, stock }) => {
                     <span type="button" className="btn btn-warning text-white mb-2">{count}</span>
                     <span type="button" className="btn btn-warning text-white mb-2" onClick={aumentar}>+</span>
                 </div>
-                <Link id={`btnCarrito${id}`} to="#" className="btn btn-warning text-white d-block mx-auto"  onClick={() => onAdd(count)} style={{boxShadow: "0px 3px 5px #7d7d7d"}}>Add to Cart <i className="fa-solid fa-face-laugh-beam"></i></Link>
+                <Link id={`btnCarrito${id}`} to="#" className="btn btn-warning text-white d-block mx-auto"  onClick={() => onAdd(count)} style={{boxShadow: "0px 3px 5px #7d7d7d"}}>Add <i className="fa-solid fa-whiskey-glass"></i></Link>
             </>
     )
 }

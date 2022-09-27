@@ -3,12 +3,14 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../Items/ItemList";
 import { getFirestore, collection, getDocs, query, where  } from 'firebase/firestore'
+import { Loading } from "../Loading/Loading";
 
 
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
 
     const [items, setItems] = useState([])
+    const [loading, setLoading] = useState(true)
 
     let { categoryId } = useParams()
 
@@ -18,19 +20,19 @@ const ItemListContainer = ({ greeting }) => {
         const queryItems = categoryId ? query(itemsCollection, where('category', '==', categoryId )) : itemsCollection;
         getDocs(queryItems).then(snapShot => {
             setItems(snapShot.docs.map(item =>  ({id:item.id, ...item.data()}) ))
+            setLoading(false)
         })
     }, [categoryId])
 
 
-
     return (
-        <div className="container">
+        <div className="container mb-5">
             <div className="row mt-2">
                 <div className="col">
-                    <h1 className="titulo">{greeting}</h1>
+                    <h1 className="titulo">Your Winerie</h1>
                 </div>
             </div>
-                    <ItemList items={items} />
+            {loading ? <Loading /> : <ItemList items={items} /> }       
         </div>
     )
 }
