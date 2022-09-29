@@ -18,16 +18,6 @@ const Item = ({ item }) => {
                 </div>
         </div>
 
-
-
-        // <div className="card-img-top m-2 " style={{maxWidth: '16rem'}}>
-        //     <img src={item.pictureURL} className="card-img-top w-50" alt={item.title}  />
-        //         <div className="card-body text-center">
-        //             <h5 className="card-title">{item.title}</h5>
-        //             <p className="card-text mt-2">{item.description}</p>
-        //             <Link to={`/item/${item.id}`} className="btn btn-warning  text-white" style={{boxShadow: "0px 3px 5px #7d7d7d"}}>More Info</Link>
-        //         </div>
-        // </div>
     )
 }
 

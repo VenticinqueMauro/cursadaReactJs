@@ -13,7 +13,10 @@ const ItemListContainer = () => {
     const [loading, setLoading] = useState(true)
 
     let { categoryId } = useParams()
-
+    let { lessthan25 } = useParams()
+    let { lessthan100 } = useParams()
+    let { morethan100 } = useParams()
+    
     useEffect(() => {
         const db = getFirestore();
         const itemsCollection = collection(db, 'whiskys')
@@ -23,6 +26,36 @@ const ItemListContainer = () => {
             setLoading(false)
         })
     }, [categoryId])
+
+    useEffect(() => {
+        const db = getFirestore();
+        const itemsCollection = collection(db, 'whiskys')
+        const queryItems = lessthan25 ? query(itemsCollection, where('price', '<=', 25000)) : itemsCollection;
+        getDocs(queryItems).then(snapShot => {
+            setItems(snapShot.docs.map(item =>  ({id:item.id, ...item.data()}) ))
+            setLoading(false)
+        })
+    }, [lessthan25])
+
+    useEffect(() => {
+        const db = getFirestore();
+        const itemsCollection = collection(db, 'whiskys')
+        const queryItems = lessthan100 ? query(itemsCollection, where('price', '<', 100000)) : itemsCollection;
+        getDocs(queryItems).then(snapShot => {
+            setItems(snapShot.docs.map(item =>  ({id:item.id, ...item.data()}) ))
+            setLoading(false)
+        })
+    }, [lessthan100])
+
+    useEffect(() => {
+        const db = getFirestore();
+        const itemsCollection = collection(db, 'whiskys')
+        const queryItems = morethan100 ? query(itemsCollection, where('price', '>', 100000)) : itemsCollection;
+        getDocs(queryItems).then(snapShot => {
+            setItems(snapShot.docs.map(item =>  ({id:item.id, ...item.data()}) ))
+            setLoading(false)
+        })
+    }, [morethan100])
 
 
     return (

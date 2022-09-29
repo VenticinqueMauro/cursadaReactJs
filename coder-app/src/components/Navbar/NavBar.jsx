@@ -17,7 +17,7 @@ const NavBar = () => {
                         <li className="nav-item ">
                             <NavLink className="nav-link active" aria-current="page" to='/'>Home</NavLink>
                         </li>
-                        <li className="nav-item dropdown ">
+                        <li className="nav-item dropdown">
                             <NavLink className="nav-link dropdown-toggle" to='#' role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Products Age
                             </NavLink>
@@ -26,6 +26,16 @@ const NavBar = () => {
                                 <li><NavLink className="dropdown-item bg-transparent text-white rounded-pill" type='button' to='/category/15'>15 Years</NavLink></li>
                                 <li><NavLink className="dropdown-item bg-transparent text-white rounded-pill" type='button' to='/category/18'>18 Years</NavLink></li>
                                 <li><NavLink className="dropdown-item bg-transparent bg-transparent text-white rounded-pill" type='button' to=''>All</NavLink></li>
+                            </ul>
+                        </li>
+                        <li className="nav-item dropdown ">
+                            <NavLink className="nav-link dropdown-toggle" to='#' role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Price Filter
+                            </NavLink>
+                            <ul className="dropdown-menu bg-transparent text-center border-0">
+                                <li><NavLink className="dropdown-item bg-transparent text-white rounded-pill" type='button' to='/lessthan25/lessthan25'>- $25000</NavLink></li>
+                                <li><NavLink className="dropdown-item bg-transparent text-white rounded-pill" type='button' to='/lessthan100/lessthan100'>- $99.000</NavLink></li>
+                                <li><NavLink className="dropdown-item bg-transparent text-white rounded-pill" type='button' to='/morethan100/morethan100'>+ $99.000</NavLink></li>
                             </ul>
                         </li>
                         <li className="nav-item ">

@@ -1,6 +1,8 @@
 import React from 'react'
+import audioPresentacion from '../Audio/presentacion.mp3'
 
 export const Presentacion = ({ ingresar }) => {
+
 
     return (
         <div className="container-fluid bg-dark min-vh-100 text-white presentacion d-flex align-items-center">
@@ -21,7 +23,7 @@ export const Presentacion = ({ ingresar }) => {
                     </div>
                 </div>
                 <div className="col-4">
-                    <p className='d-none'>a</p>
+                    <audio src={audioPresentacion} autoPlay type='audio/mp3'></audio>
                 </div>
                 <div className="col-4 d-flex flex-column d-block my-auto text-center redesPresentacion">
                 </div>
