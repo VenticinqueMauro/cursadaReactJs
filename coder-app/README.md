@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Proyecto Final ReactJs CoderHouse 2022
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pagina Web con fines ilustrativos.
 
-## Available Scripts
 
-In the project directory, you can run:
+# WhiskysPage:
 
-### `npm start`
+## Link Web
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[whiskyspage.com](https://whiskyspage.netlify.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+# Descripcion:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Comercio electronico de venta de Whiskys.
 
-### `npm run build`
+# Instalacion:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Una vez dentro de la carpeta coder-app ejectutar: 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
+# Explicativo de compra 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Seleccion de productos:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Click en el icono "i" para ingresar en la informacion/detalle del producto.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![](explicativoCompra/seleccion.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Seleccion de cantidad de productos
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Selecciona la cantidad de productos deseados y agregalos al "Vaso" de compras.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![](explicativoCompra/cantidad.png)
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Compra de el/los producto/s
 
-### Analyzing the Bundle Size
+Selecciona "Buy" para proceder con la comprar y rellena los campos "name" "email" y "phone" para generar una Orden de comprar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![](explicativoCompra/buy.png)
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## FELICIDADES! Orden de compra generada
 
-### Advanced Configuration
+Se genera de manera automatica un **Numero De Orden** unico que almacena todos los datos de tu compra (cantidad y tipo de producto, nombre, email y telefono para continuar con la compra)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![](explicativoCompra/ordengenerada.png)
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Video Explicativo de la ruta de compra
 
-### `npm run build` fails to minify
+GIF con una pequeña demostracion de la ruta de compra
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Ruta De Compra](explicativoCompra/rutaCompra.gif)
+

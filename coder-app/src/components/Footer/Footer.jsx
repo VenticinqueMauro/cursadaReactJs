@@ -11,10 +11,10 @@ export const Footer = () => {
             </div>
 
             <ul className="nav col-md-4 justify-content-end list-unstyled d-flex pe-5">
-                <li className="ms-3 pt-1 pe-2"><a className="text-muted" href="#"><i className="fa-brands fa-twitter h5 iconoPresentacion"></i></a></li>
-                <li className="ms-3 pt-1 pe-2"><a className="text-muted" href="#"><i className="fa-brands fa-github-alt h5 iconoPresentacion"></i></a></li>
-                <li className="ms-3 pt-1 pe-2"><a className="text-muted" href="#"><i className="fa-brands fa-linkedin-in h5 iconoPresentacion"></i></a></li>
-                <li className="ms-3 pt-1 pe-2"><a className="text-muted" href="#"><i className="fa-solid fa-envelope iconoPresentacion h5"></i></a></li>
+                <li className="ms-3 pt-1 pe-2"><a className="text-muted" href="https://twitter.com/VenticinqueMa" target='_blank'><i className="fa-brands fa-twitter h5 iconoPresentacion"></i></a></li>
+                <li className="ms-3 pt-1 pe-2"><a className="text-muted" href="https://github.com/VenticinqueMauro" target='_blank'><i className="fa-brands fa-github-alt h5 iconoPresentacion"></i></a></li>
+                <li className="ms-3 pt-1 pe-2"><a className="text-muted" href="https://www.linkedin.com/in/mauro-venticinque-39a256235/" target='_blank'><i className="fa-brands fa-linkedin-in h5 iconoPresentacion"></i></a></li>
+                <li className="ms-3 pt-1 pe-2"><a className="text-muted" href="mailto:mauro.venticinque@hotmail.com"><i className="fa-solid fa-envelope iconoPresentacion h5"></i></a></li>
                 
             </ul>
         </footer>

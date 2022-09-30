@@ -27,8 +27,8 @@ const ItemCount = ( { initial, id, onAdd, stock }) => {
                 </div>
                 <div className=''>
 
-                <Link id={`btnCarrito${id}`} to="#" className="btn btn-warning text-black mt-3 fw-bold rounded-pill"  onClick={() => onAdd(count)} style={{boxShadow: "0px 3px 5px #0000"}}>Add <i className="fa-solid fa-plus"></i></Link>
-                <Link to='/cart' className='btn btn-warning text-black mt-3 fw-bold rounded-pill ms-5' style={{boxShadow: "0px 3px 5px #0000"}}>Go Glass! <i className="fa-solid fa-whiskey-glass"></i></Link>
+                <Link id={`btnCarrito${id}`} to="#" className="btn btn-warning text-black mt-3 fw-bold rounded-pill btn-itemCount"  onClick={() => onAdd(count)} style={{boxShadow: "0px 3px 5px #0000"}}>Add <i className="fa-solid fa-plus"></i></Link>
+                <Link to='/cart' className='btn btn-warning text-black mt-3 fw-bold rounded-pill ms-5 btn-itemCount' style={{boxShadow: "0px 3px 5px #0000"}}>Go Glass! <i className="fa-solid fa-whiskey-glass"></i></Link>
                 </div>
             </>
     )

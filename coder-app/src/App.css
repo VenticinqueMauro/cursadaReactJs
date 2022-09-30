@@ -27,6 +27,7 @@ body {
 }
 
 
+
 /* NAV-BAR */
 
 .navbar {
@@ -224,6 +225,14 @@ body {
   }
 }
 
+.btn{
+  transition: 300ms;
+}
+
+.btn:hover{
+  transform: scale(1.05);
+}
+
 
 /* CARDS  */
 
@@ -279,6 +288,10 @@ body {
   background-color: #ffc107;
   color: #000 !important;
   animation: jelly 0.5s;
+}
+
+.btn-info:focus{
+  background-color: #ffc107;
 }
 
 @keyframes jelly {
@@ -417,6 +430,7 @@ body {
 #exampleFormControlInput3::-webkit-input-placeholder {
   color: #000;
 }
+
 
 .form-control:focus{
   box-shadow: 1px 1px 0px #000;
