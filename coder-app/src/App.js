@@ -30,7 +30,7 @@ function App() {
   return (
     <div className='container-fluid'>
       <BrowserRouter>
-        <CartProvider>z
+        <CartProvider>
           <NavBar />
           <Routes>
             <Route path='/' element={<ItemListContainer />} />
